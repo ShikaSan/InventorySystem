@@ -1,6 +1,5 @@
 ﻿Public Class clsMaintenance : Inherits dbhelper
 
-    'Comment to test GitHub on VisualStudio
     Public Function getData(param_mode As Integer) As DataSet
         Dim strQuery As New StringBuilder
         Dim ds As DataSet
