@@ -1,0 +1,73 @@
+﻿<%@ Master Language="VB"
+    AutoEventWireup="false"
+    CodeBehind="pmInventory.Master.vb"
+    Inherits="InventorySystem.pageMaster" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" href="../CSS/w3.css" />
+    <style>
+        .labelSytle {
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .textboxStyle {
+            font-size: 12px;
+        }
+
+        .lineTextBoxStyle {
+            padding: 6px;
+            font-size: 12px;
+            height: 35px;
+        }
+
+        .imageStyle {
+            padding-top: 5px;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="background-color: lightgrey">
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                <div class="w3-container w3-top w3-padding" style="z-index: 4; background-color: #1e8cdb;">
+                    <div class="w3-row">
+                        <div class="w3-left">
+                            <b><span class="w3-left " style="color: white; margin-top: 4px;">ITSG Inventory System </span></b>
+                            <asp:Button runat="server" OnClick="btnHome_Click" ID="btnHome" Text="Home" class=" w3-padding-0 w3-transparent w3-text-white " Font-Bold="True" Style="background-color: #1e8cdb; color: black; padding: 4px; margin-left: 25px" BorderStyle="None" />
+                            <asp:Button runat="server" OnClick="btnAssignedEq_Click" ID="btnAssignedEq" Text="Accountability List" class=" w3-padding-0 w3-transparent w3-text-white " Font-Bold="True" Style="background-color: #1e8cdb; color: black; padding: 4px;" BorderStyle="None" />
+                            <asp:Button runat="server" OnClick="btnHistory_Click" ID="btnHistory" Text="History" class=" w3-padding-0 w3-transparent w3-text-white " Font-Bold="True" Style="background-color: #1e8cdb; color: black; padding: 4px;" BorderStyle="None" />
+                            <asp:Button ID="btnRepairPage" runat="server" OnClick="btnRepairPage_Click" Text="Equipment Repair" class=" w3-padding-0 w3-transparent w3-text-white " Font-Bold="True" Style="background-color: #1e8cdb; color: black; padding: 4px;" BorderStyle="None" />
+                            <%--<asp:Button runat="server" OnClick="btnReports_Click" ID="btnReports" Text="Reports" class=" w3-padding-0 w3-transparent w3-text-white " Font-Bold="True" Style="background-color: #1e8cdb; color: black; padding: 4px;" BorderStyle="None" />--%>
+                        </div>
+                        <div runat="server" class="w3-right " style="z-index: 5;">
+                            <asp:Label ID="lblName" runat="server" Text="" Font-Size="Smaller" CssClass="w3-text-white w3-margin-right"></asp:Label>
+                            <div class="w3-dropdown-hover">
+                                <button class="w3-transparent" style="margin:0px 0px 0px 0px;border:none">
+                                    <img src="/Resources/glyphicons-137-cogwheel.png" height="15" width="15" style="margin:0px 0px 0px 0px;padding:0px 0px 0px 0px;" />
+                                </button>
+                                <div class="w3-dropdown-content w3-bar-block w3-border" style="right: 0">
+                                    <a id="btnMaintenance" runat="server" href="~/Forms/Maintenance.aspx" class="w3-padding labelSytle w3-bar-item w3-button">System Settings></a>                               <hr style="margin-top: 0px; margin-bottom: 0px;" />
+                                    <asp:Button runat="server" OnClick="btnLogout_Click" ID="btnLogout" Text="Logout" class="w3-transparent w3-text-black w3-bar-item w3-button labelSytle" Font-Bold="true" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+    <div class="w3-container">
+    <asp:ContentPlaceHolder runat="server" ID="ForRepairForm">
+
+    </asp:ContentPlaceHolder>
+    </div>
+</body>
+</html>
