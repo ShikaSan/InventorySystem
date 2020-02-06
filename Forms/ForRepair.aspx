@@ -28,7 +28,7 @@
                         <asp:Table runat="server">
                             <asp:TableRow>
                                 <asp:TableCell Width="70%">
-                                    <asp:TextBox ID="txtBoxSearchRepair" class="" runat="server" CssClass="w3-input w3-border textboxStyle"></asp:TextBox>
+                                    <asp:TextBox ID="txtBoxSearchRepair" class="" runat="server"></asp:TextBox>
                                 </asp:TableCell>
                                 <asp:TableCell>
                                     <asp:Button ID="btnSearchRepair" runat="server" Text="Search Name" CssClass="w3-button w3-border" Font-Size="12px" Font-Bold="true" BackColor="#1e8cdb" ForeColor="White" />
