@@ -69,7 +69,7 @@
                                 </asp:TableRow>
                                 <asp:TableRow>
                                     <asp:TableCell Style=" width: 100%; padding-right: 20px">
-                                        <editable:EditableDropDownList runat="server" ID="txtSearchEmployeeDomain" CssClass="w3-input w3-border textboxStyle" AutoPostBack="True"></editable:EditableDropDownList>
+                                        <editable:EditableDropDownList runat="server" ID="txtSearchEmployeeDomain" CssClass="" AutoPostBack="True"></editable:EditableDropDownList>
                                     </asp:TableCell>
                                     <asp:TableCell Style="width: 100%; padding-bottom: 8%; padding-left: 5%">
                                         <asp:Button runat="server" ID="btnSearchDomain" OnClick="btnSearchDomain_Click" Text="Search" CssClass="w3-button w3-border" Font-Size="12px" Font-Bold="true" BackColor="#1e8cdb" ForeColor="White" />
