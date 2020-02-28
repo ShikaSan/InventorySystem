@@ -1,4 +1,4 @@
-﻿<%@ Master Language="VB"
+﻿﻿<%@ Master Language="VB"
     AutoEventWireup="false"
     CodeBehind="pmInventory.Master.vb"
     Inherits="InventorySystem.pageMaster" %>
@@ -6,9 +6,18 @@
 <!DOCTYPE html>
 <html>
 <head runat="server">
-    <title></title>
-    <link rel="stylesheet" href="../CSS/w3.css" />
-    <style>
+<title></title>
+
+<asp:ContentPlaceHolder runat="server" ID="MainHead">
+
+</asp:ContentPlaceHolder>
+
+<link rel="stylesheet" href="~/CSS/w3.css" runat="server" />
+        <style>
+        #headingDiv{
+             background-color: #1e8cdb;
+        }
+
         .labelSytle {
             font-size: 20px;
             font-weight: 700;
@@ -28,15 +37,14 @@
             padding-top: 5px;
         }
     </style>
-    <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
+
+<asp:ContentPlaceHolder ID="head" runat="server">
+</asp:ContentPlaceHolder>
 </head>
 <body style="background-color: lightgrey">
-    <form id="form1" runat="server">
-        <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                <div class="w3-container w3-top w3-padding" style="z-index: 4; background-color: #1e8cdb;">
-                    <div class="w3-row">
+<form id="form1" class="form1 w3-container w3-section w3-white" runat="server" method="post">
+         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                <div id="headingDiv" class="w3-container w3-padding-large">
                         <div class="w3-left">
                             <b><span class="w3-left " style="color: white; margin-top: 4px;">ITSG Inventory System </span></b>
                             <asp:Button runat="server" OnClick="btnHome_Click" ID="btnHome" Text="Home" class=" w3-padding-0 w3-transparent w3-text-white " Font-Bold="True" Style="background-color: #1e8cdb; color: black; padding: 4px; margin-left: 25px" BorderStyle="None" />
@@ -57,17 +65,16 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
                 </div>
             </asp:ContentPlaceHolder>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
-            </asp:ContentPlaceHolder>
-        </div>
+
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+
+                </asp:ContentPlaceHolder>
     </form>
-    <div class="w3-container">
-    <asp:ContentPlaceHolder runat="server" ID="ForRepairForm">
+
+    <asp:ContentPlaceHolder ID="BodyScripts" runat="server">
 
     </asp:ContentPlaceHolder>
-    </div>
 </body>
 </html>

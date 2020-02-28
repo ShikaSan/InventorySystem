@@ -7,7 +7,10 @@
         If param_mode = 0 Then
             strQuery.Append("SELECT idDept, DeptName as 'Department Name' FROM tbl_Departments ORDER BY DeptName ASC ")
         ElseIf param_mode = 1 Then
-            strQuery.Append("SELECT Types_ID, EQType as Type FROM tbl_Type ORDER BY EQType ASC ")
+            strQuery.Append("SELECT b.Types_ID, b.EQType as 'Type', COUNT(a.Equipment_Type) AS 'Equipment Count'
+                             FROM tbl_Equipments a
+                             RIGHT JOIN tbl_Type b ON b.EQType = a.Equipment_Type
+                             GROUP BY b.Types_ID, b.EQType ORDER BY EQType ASC")
         ElseIf param_mode = 2 Then
             strQuery.Append("SELECT id , name as 'Name', domain as 'Domain', user_level as 'Access Type', active AS 'Active' FROM tbl_User_Access  ")
         End If

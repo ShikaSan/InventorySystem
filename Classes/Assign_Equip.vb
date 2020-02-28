@@ -243,7 +243,7 @@ Public Class Assign_Equip : Inherits dbhelper
 
         If param_pcnum <> 0 Then
             strQuery.Append("INSERT INTO tbl_Accountability VALUES
-                            (@param_pcnum ,@id)
+                            (@param_pcnum, @id)
                             ")
         End If
         Dim pDate As String = param_assignedDate.Trim
@@ -517,7 +517,7 @@ Public Class Assign_Equip : Inherits dbhelper
         End If
 
         strQuery.Append("
-                         UPDATE tbl_Host_Names SET active = 'No' WHERE PC_num = @pcnum
+                         UPDATE tbl_Host_Names SET active = 'Yes' WHERE PC_num = @pcnum
                          UPDATE tbl_Assigned_To SET active = 'No' WHERE id = '" & param_id & "'
                         ")
 

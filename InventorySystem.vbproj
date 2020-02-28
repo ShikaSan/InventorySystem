@@ -88,6 +88,9 @@
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -104,8 +107,36 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.4\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
     <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.4\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.4\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.4\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -149,7 +180,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CSS\font-awesome.min.css" />
-    <Content Include="Forms\ForRepair.aspx" />
+    <Content Include="Forms\AssignAdditional_Equip.aspx" />
+    <Content Include="Forms\Assign_Additional_Equip.aspx" />
+    <Content Include="js\combobox.js" />
+    <Content Include="js\jquery-3.4.1.min.js" />
     <Content Include="WSIInventory.asmx" />
     <None Include="CSS\img\ui-bg_diagonals-thick_18_b81900_40x40.png" />
     <None Include="CSS\img\ui-bg_diagonals-thick_20_666666_40x40.png" />
@@ -236,6 +270,7 @@
     <Compile Include="Classes\DataSet1.vb">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Classes\EquipmentRepair.vb" />
     <Compile Include="Classes\Maintenance.vb" />
     <Compile Include="Classes\User_Validation.vb" />
     <Compile Include="Classes\DataSet11.Designer.vb">
@@ -264,12 +299,19 @@
     <Compile Include="Classes\Inventory.vb" />
     <Compile Include="Classes\View_Accountability.vb" />
     <Compile Include="Classes\dbhelper.vb" />
-    <Compile Include="Forms\ForRepair.aspx.designer.vb">
-      <DependentUpon>ForRepair.aspx</DependentUpon>
+    <Compile Include="Forms\AssignAdditional_Equip.aspx.designer.vb">
+      <DependentUpon>AssignAdditional_Equip.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ForRepair.aspx.vb">
-      <DependentUpon>ForRepair.aspx</DependentUpon>
+    <Compile Include="Forms\AssignAdditional_Equip.aspx.vb">
+      <DependentUpon>AssignAdditional_Equip.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Assign_Additional_Equip.aspx.designer.vb">
+      <DependentUpon>Assign_Additional_Equip.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Assign_Additional_Equip.aspx.vb">
+      <DependentUpon>Assign_Additional_Equip.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Forms\History.aspx.designer.vb">
       <DependentUpon>History.aspx</DependentUpon>
@@ -428,13 +470,13 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>64648</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:64648/</IISUrl>
+          <IISUrl>http://localhost:51236/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
           </CustomServerUrl>
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
-          <servers defaultServer="SelfHostServer">
+          <servers defaultServer="">
             <server name="SelfHostServer" exePath="" cmdArgs="" url="http://localhost:64648/" workingDir="" />
           </servers>
         </WebProjectProperties>

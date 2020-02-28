@@ -141,7 +141,7 @@ Public Class ViewEqiupment
         txtRemarks.Text = ds.Tables(0).Rows(0)(8).ToString()
         ddlStatus.Text = ds.Tables(0).Rows(0)(9).ToString()
         txtAssignedTo.Text = ds.Tables(0).Rows(0)(10).ToString()
-        ddlLocation.SelectedIndex = ds.Tables(0).Rows(0)(11).ToString()
+        ddlLocation.Text = ds.Tables(0).Rows(0)(11).ToString()
         txtOS.Text = ds.Tables(0).Rows(0)(12).ToString()
         txtHostName.Text = ds.Tables(0).Rows(0)(13).ToString()
 
@@ -260,12 +260,13 @@ Public Class ViewEqiupment
             obj.AssignedTo = txtAssignedTo.Text
             obj.Remarks = txtRemarks.Text
             obj.DateAcquired = txtDateAcquired.Text
-            obj.Location = ddlLocation.SelectedIndex
+            obj.Location = ddlLocation.Text
             obj.RFTnum = txtRFTnum.Text
             obj.RFTDate = txtRFTdate.Text
             obj.OS = txtOS.Text
             obj.HostName = txtHostName.Text
 
+            equipLocation = obj.Location.ToString()
 
             If dvNoPic.Visible = True Then
                 Dim data As Byte() = FileUploadByte()
@@ -363,34 +364,5 @@ Public Class ViewEqiupment
             e.Row.Cells(5).Visible = False
         End If
     End Sub
-
-    'Protected Sub fill_ReplacementDDL()
-    '    Dim replacementType As String
-    '    Dim ddl_DataSet As New DataSet
-    '    Dim ddl_DataTable As New DataTable
-
-    '    replacementType = ddlType.Text.ToString
-
-    '    Dim Str As String
-    '    Str = "Password=ch33s3c@k3;User ID=sa;Initial Catalog=Inventory_ITSG;Data Source=wsimkt-dt656; Persist Security Info=true; Connect Timeout=1000"
-
-    '    Using con As New SqlConnection(Str)
-    '        Dim com As String
-    '        com = "SELECT Equipment_ID, Equipment_Description
-    '                     FROM tbl_Equipments WHERE Equipment_Status = 'On Stock' AND Equipment_Type = '" & replacementType.Trim & "' 
-    '                     "
-    '        Dim adpt = New SqlDataAdapter(com, con)
-    '        adpt.Fill(ddl_DataSet)
-
-    '        ddlReplacement.DataSource = ddl_DataSet
-    '        ddlReplacement.DataBind()
-    '        ddlReplacement.DataTextField = "Equipment_Description"
-    '        ddlReplacement.DataValueField = "Equipment_ID"
-    '        ddlReplacement.DataBind()
-
-    '        con.Close()
-    '    End Using
-
-    'End Sub
 
 End Class

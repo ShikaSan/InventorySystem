@@ -25,8 +25,6 @@
                     getTypes()
                     getStatus()
                     Me.Master.getUserName(strFullName, strUserName)
-                    'Session.Remove("Username")
-                    'Session.Remove("FullName")
                     Dim cls As New User_Validation
                     If cls.userLevel(strUserName) = "RO" Then
                         btnAdd.Visible = False
@@ -85,8 +83,6 @@
 
     Protected Sub gvView_SelectedIndexChanged(sender As Object, e As EventArgs)
         Session("id") = gvView.SelectedRow.Cells(0).Text
-        'Session("Username") = strUserName
-        'Session("FullName") = strFullName
         strUserName = ""
         strFullName = ""
         Response.Redirect("~/Forms/ViewEquipment.aspx")

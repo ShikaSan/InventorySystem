@@ -112,6 +112,7 @@
     Protected Sub btnEdit_Click(sender As Object, e As EventArgs)
         dvView.Visible = True
         dvMain.Visible = False
+        txtHostName.Enabled = False
         setDropDownList()
         getAllData(userid)
     End Sub
@@ -396,9 +397,12 @@
         Dim save As New Assign_Equip
         Dim pcnum As Integer = 0
         Dim counter As Integer = 0
+        Dim readPCNum As Integer = 0
 
-        If save.validatePCnumber(txtHostName.Text, ddlType.Text) > 0 Then
-            pcnum = save.validatePCnumber(txtHostName.Text, ddlType.Text)
+        readPCNum = save.validatePCnumber(txtHostName.Text, ddlType.Text)
+
+        If readPCNum > 0 Then
+            pcnum = readPCNum
         Else
             pcnum = save.getPCnumber() + 1
         End If
@@ -420,7 +424,7 @@
                     counter = counter + 1
                 End If
                 If ddlRAMldesc.Text <> "" Then
-                    save.saveAssign("RAM", ddlRAMlppe.Text, ddlRAMlasset.Text, ddlRAMlserial.Text, txtAssignedTo.Text, txtAssignDate.Text, ddlType.Text, ddlLocation.SelectedIndex, txtHostName.Text, pcnum, txtRFTno.Text, txtRFTdate.Text)
+                    save.saveAssign("Memory", ddlRAMlppe.Text, ddlRAMlasset.Text, ddlRAMlserial.Text, txtAssignedTo.Text, txtAssignDate.Text, ddlType.Text, ddlLocation.SelectedIndex, txtHostName.Text, pcnum, txtRFTno.Text, txtRFTdate.Text)
                     counter = counter + 1
                 End If
                 If counter > 0 Then
@@ -1344,17 +1348,17 @@
     End Sub
 
     Private Sub setRamDetails()
-        ddlRAMPPE.DataSource = getPPEList("RAM", ddlRAMDesc.Text)
+        ddlRAMPPE.DataSource = getPPEList("Memory", ddlRAMDesc.Text)
         ddlRAMPPE.DataTextField = "Equipment_PPE_Number"
         ddlRAMPPE.DataBind()
         ddlRAMPPE.Items.Insert(0, "")
         ddlRAMPPE.Items(0).Value = 0
-        ddlRAMAsset.DataSource = getAssetList("RAM", ddlRAMDesc.Text)
+        ddlRAMAsset.DataSource = getAssetList("Memory", ddlRAMDesc.Text)
         ddlRAMAsset.DataTextField = "Equipment_Asset_Number"
         ddlRAMAsset.DataBind()
         ddlRAMAsset.Items.Insert(0, "")
         ddlRAMAsset.Items(0).Value = 0
-        ddlRAMSerial.DataSource = getSerialList("RAM", ddlRAMDesc.Text)
+        ddlRAMSerial.DataSource = getSerialList("Memory", ddlRAMDesc.Text)
         ddlRAMSerial.DataTextField = "Equipment_Serial"
         ddlRAMSerial.DataBind()
         ddlRAMSerial.Items.Insert(0, "")
@@ -1542,17 +1546,17 @@
     End Sub
 
     Private Sub setRamLDetails()
-        ddlRAMlppe.DataSource = getPPEList("RAM", ddlRAMldesc.Text)
+        ddlRAMlppe.DataSource = getPPEList("Memory", ddlRAMldesc.Text)
         ddlRAMlppe.DataTextField = "Equipment_PPE_Number"
         ddlRAMlppe.DataBind()
         ddlRAMlppe.Items.Insert(0, "")
         ddlRAMlppe.Items(0).Value = 0
-        ddlRAMlasset.DataSource = getAssetList("RAM", ddlRAMldesc.Text)
+        ddlRAMlasset.DataSource = getAssetList("Memory", ddlRAMldesc.Text)
         ddlRAMlasset.DataTextField = "Equipment_Asset_Number"
         ddlRAMlasset.DataBind()
         ddlRAMlasset.Items.Insert(0, "")
         ddlRAMlasset.Items(0).Value = 0
-        ddlRAMlserial.DataSource = getSerialList("RAM", ddlRAMldesc.Text)
+        ddlRAMlserial.DataSource = getSerialList("Memory", ddlRAMldesc.Text)
         ddlRAMlserial.DataTextField = "Equipment_Serial"
         ddlRAMlserial.DataBind()
         ddlRAMlserial.Items.Insert(0, "")

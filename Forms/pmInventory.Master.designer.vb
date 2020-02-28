@@ -14,6 +14,15 @@ Option Explicit On
 Partial Public Class pageMaster
     
     '''<summary>
+    '''MainHead control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents MainHead As Global.System.Web.UI.WebControls.ContentPlaceHolder
+    
+    '''<summary>
     '''head control.
     '''</summary>
     '''<remarks>
@@ -66,7 +75,7 @@ Partial Public Class pageMaster
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btnHistory As Global.System.Web.UI.WebControls.Button
-
+    
     '''<summary>
     '''btnRepairPage control.
     '''</summary>
@@ -75,7 +84,7 @@ Partial Public Class pageMaster
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btnRepairPage As Global.System.Web.UI.WebControls.Button
-
+    
     '''<summary>
     '''lblName control.
     '''</summary>
@@ -113,11 +122,11 @@ Partial Public Class pageMaster
     Protected WithEvents ContentPlaceHolder2 As Global.System.Web.UI.WebControls.ContentPlaceHolder
     
     '''<summary>
-    '''ForRepairForm control.
+    '''BodyScripts control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents ForRepairForm As Global.System.Web.UI.WebControls.ContentPlaceHolder
+    Protected WithEvents BodyScripts As Global.System.Web.UI.WebControls.ContentPlaceHolder
 End Class

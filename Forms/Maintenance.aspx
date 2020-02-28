@@ -65,7 +65,7 @@
                     </div>
                     <asp:GridView runat="server" ID="gvTypes" AutoGenerateColumns="true" OnRowDataBound="gvTypes_RowDataBound" AllowPaging="true" OnPageIndexChanging="gvTypes_PageIndexChanging"
                         OnSelectedIndexChanged="gvTypes_SelectedIndexChanged" BorderStyle="None" GridLines="Horizontal" Width="100%" CellPadding="5" Font-Size="14px">
-                        <RowStyle CssClass="RowStyle" />
+                        <RowStyle CssClass="RowStyle" HorizontalAlign="Center" />
                         <HeaderStyle BackColor="#1e8cdb" CssClass="l9" ForeColor="White" />
                         <EmptyDataTemplate>
                             <div style="text-align: center;">

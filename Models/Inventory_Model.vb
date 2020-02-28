@@ -1,5 +1,5 @@
 ﻿Public Class Inventory_Model
-    Public Property Location As Integer
+    Public Property Location As String
     Public Property ID As Integer
     Public Property Data As Byte()
     Public Property Status As String

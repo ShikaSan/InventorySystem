@@ -177,7 +177,7 @@ start:
                             ddlBatteryPPE.Text = ds.Tables(0).Rows(x)(3).ToString()
                             ddlBatteryAsset.Text = ds.Tables(0).Rows(x)(4).ToString()
                             ddlBatterySerial.Text = ds.Tables(0).Rows(x)(5).ToString()
-                        Case "RAM"
+                        Case "Memory"
                             ddlRAMldesc.Text = ds.Tables(0).Rows(x)(2).ToString()
                             setRamLDetails()
                             ddlRAMlppe.Text = ds.Tables(0).Rows(x)(3).ToString()
@@ -215,7 +215,7 @@ start:
                             ddlMOBOPPE.Text = ds.Tables(0).Rows(x)(3).ToString()
                             ddlMOBOAsset.Text = ds.Tables(0).Rows(x)(4).ToString()
                             ddlMOBOSerial.Text = ds.Tables(0).Rows(x)(5).ToString()
-                        Case "RAM"
+                        Case "Memory"
                             ddlRAMDesc.Text = ds.Tables(0).Rows(x)(2).ToString()
                             setRamDetails()
                             ddlRAMPPE.Text = ds.Tables(0).Rows(x)(3).ToString()
@@ -326,7 +326,7 @@ start:
                 ddlMOBODesc.DataBind()
                 ddlMOBODesc.Items.Insert(0, "")
                 ddlMOBODesc.Items(0).Value = 0
-                ddlRAMDesc.DataSource = getDesc("RAM")
+                ddlRAMDesc.DataSource = getDesc("Memory")
                 ddlRAMDesc.DataTextField = "Equipment_Description"
                 ddlRAMDesc.DataBind()
                 ddlRAMDesc.Items.Insert(0, "")
@@ -410,11 +410,13 @@ start:
                         counter = counter + 1
                     End If
                     If ddlRAMldesc.Text <> "" Then
-                        save.saveAssign("RAM", ddlRAMlppe.Text, ddlRAMlasset.Text, ddlRAMlserial.Text, txtAssignedTo.Text, txtAssignDate.Text, ddlType.Text, ddlLocation.SelectedIndex, txtHostName.Text, pcnum, "", "")
+                        save.saveAssign("Memory", ddlRAMlppe.Text, ddlRAMlasset.Text, ddlRAMlserial.Text, txtAssignedTo.Text, txtAssignDate.Text, ddlType.Text, ddlLocation.SelectedIndex, txtHostName.Text, pcnum, "", "")
                         counter = counter + 1
                     End If
-                    If counter > 0 Then
+                    If counter > 0 AndAlso pcnum > 0 Then
                         save.saveInfo(txtHostName.Text, txtAssignedTo.Text, txtAssignDate.Text, txtDepartment.Text, txtItemOS.Text, txtPosition.Text, ddlType.Text, "Laptop", ddlLaptopDesc.Text, ddlLaptopPPE.Text, ddlLaptopAsset.Text, ddlLaptopSerial.Text, "", "", mode, lblAcode.Text)
+                    ElseIf counter > 0 AndAlso pcnum = 0 Then
+                        save.saveInfo(txtHostName.Text, txtAssignedTo.Text, txtAssignDate.Text, txtDepartment.Text, txtItemOS.Text, txtPosition.Text, ddlType.Text, "Laptop", ddlLaptopDesc.Text, ddlLaptopPPE.Text, ddlLaptopAsset.Text, ddlLaptopSerial.Text, "", "", "Update", lblAcode.Text)
                     End If
                 Else
                     System.Web.HttpContext.Current.Response.Write("<script>alert(" & ControlChars.Quote & "Please enter required fields!" & ControlChars.Quote & ");</script>")
@@ -438,7 +440,7 @@ start:
                         counter = counter + 1
                     End If
                     If ddlRAMDesc.Text <> "" Then
-                        save.saveAssign("RAM", ddlRAMPPE.Text, ddlRAMAsset.Text, ddlRAMSerial.Text, txtAssignedTo.Text, txtAssignDate.Text, ddlType.Text, ddlLocation.SelectedIndex, txtHostName.Text, pcnum, "", "")
+                        save.saveAssign("Memory", ddlRAMPPE.Text, ddlRAMAsset.Text, ddlRAMSerial.Text, txtAssignedTo.Text, txtAssignDate.Text, ddlType.Text, ddlLocation.SelectedIndex, txtHostName.Text, pcnum, "", "")
                         counter = counter + 1
                     End If
                     If ddlKeyboardDesc.Text <> "" Then
@@ -463,6 +465,8 @@ start:
                     End If
                     If counter > 0 Then
                         save.saveInfo(txtHostName.Text, txtAssignedTo.Text, txtAssignDate.Text, txtDepartment.Text, txtItemOS.Text, txtPosition.Text, ddlType.Text, "Casing", ddlCasingDesc.Text, ddlCasingPPE.Text, ddlCasingAsset.Text, ddlCasingSerial.Text, "", "", mode, lblAcode.Text)
+                    ElseIf counter > 0 AndAlso pcnum = 0 Then
+                        save.saveInfo(txtHostName.Text, txtAssignedTo.Text, txtAssignDate.Text, txtDepartment.Text, txtItemOS.Text, txtPosition.Text, ddlType.Text, "Casing", ddlCasingDesc.Text, ddlCasingPPE.Text, ddlCasingAsset.Text, ddlCasingSerial.Text, "", "", "Update", lblAcode.Text)
                     End If
                 Else
                     System.Web.HttpContext.Current.Response.Write("<script>alert(" & ControlChars.Quote & "Please enter required fields!" & ControlChars.Quote & ");</script>")

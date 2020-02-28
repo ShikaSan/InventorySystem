@@ -233,8 +233,8 @@
         Dim ds As DataSet
 
         strQuery.Append("SELECT DISTINCT Equipment_PPE_Number FROM tbl_Equipments ")
-        strQuery.Append("WHERE Equipment_Type = '" & param_type.Trim & "' AND Equipment_Description = '" & param_desc.Trim & "' ")
-        strQuery.Append("ORDER BY Equipment_PPE_Number ASC")
+        strQuery.Append(" WHERE Equipment_Type = '" & param_type.Trim & "' AND Equipment_Description = '" & param_desc.Trim & "'")
+        strQuery.Append(" ORDER BY Equipment_PPE_Number ASC")
 
         ds = GetDataSet(strQuery.ToString, "")
 

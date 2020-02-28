@@ -1,4 +1,12 @@
-﻿Public Class pageMaster
+﻿Imports System
+Imports System.Collections.Generic
+Imports System.Web.UI
+Imports System.Web.UI.WebControls
+Imports System.Web.Services
+Imports System.Web.Script.Services
+Imports System.Data.Sql
+Imports System.Data.SqlClient
+Public Class pageMaster
     Inherits System.Web.UI.MasterPage
     Private Shared strUserName As String = Nothing
     Private Shared strFullName As String = Nothing
@@ -73,6 +81,6 @@
     End Sub
 
     Protected Sub btnRepairPage_Click(sender As Object, e As EventArgs) Handles btnRepairPage.Click
-        Response.Redirect("~/Forms/ForRepair.aspx")
+        Response.Redirect("~/Forms/AssignAdditional_Equip.aspx")
     End Sub
 End Class
