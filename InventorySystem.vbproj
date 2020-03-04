@@ -179,12 +179,51 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bootstrap-4.4.1-dist\css\bootstrap-grid.css" />
+    <Content Include="bootstrap-4.4.1-dist\css\bootstrap-grid.min.css" />
+    <Content Include="bootstrap-4.4.1-dist\css\bootstrap-reboot.css" />
+    <Content Include="bootstrap-4.4.1-dist\css\bootstrap-reboot.min.css" />
+    <Content Include="bootstrap-4.4.1-dist\css\bootstrap.css" />
+    <Content Include="bootstrap-4.4.1-dist\css\bootstrap.min.css" />
+    <Content Include="bootstrap-4.4.1-dist\js\bootstrap.bundle.js" />
+    <Content Include="bootstrap-4.4.1-dist\js\bootstrap.bundle.min.js" />
+    <Content Include="bootstrap-4.4.1-dist\js\bootstrap.js" />
+    <Content Include="bootstrap-4.4.1-dist\js\bootstrap.min.js" />
     <Content Include="CSS\font-awesome.min.css" />
     <Content Include="Forms\AssignAdditional_Equip.aspx" />
     <Content Include="Forms\Assign_Additional_Equip.aspx" />
+    <Content Include="jquery-ui\jquery-ui-1.12.1\AUTHORS.txt" />
+    <Content Include="jquery-ui\jquery-ui-1.12.1\external\jquery\jquery.js" />
+    <Content Include="jquery-ui\jquery-ui-1.12.1\images\ui-icons_444444_256x240.png" />
+    <Content Include="jquery-ui\jquery-ui-1.12.1\images\ui-icons_555555_256x240.png" />
+    <Content Include="jquery-ui\jquery-ui-1.12.1\images\ui-icons_777620_256x240.png" />
+    <Content Include="jquery-ui\jquery-ui-1.12.1\images\ui-icons_777777_256x240.png" />
+    <Content Include="jquery-ui\jquery-ui-1.12.1\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="jquery-ui\jquery-ui-1.12.1\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="jquery-ui\jquery-ui-1.12.1\index.html" />
+    <Content Include="jquery-ui\jquery-ui-1.12.1\jquery-ui.css" />
+    <Content Include="jquery-ui\jquery-ui-1.12.1\jquery-ui.js" />
+    <Content Include="jquery-ui\jquery-ui-1.12.1\jquery-ui.min.css" />
+    <Content Include="jquery-ui\jquery-ui-1.12.1\jquery-ui.min.js" />
+    <Content Include="jquery-ui\jquery-ui-1.12.1\jquery-ui.structure.css" />
+    <Content Include="jquery-ui\jquery-ui-1.12.1\jquery-ui.structure.min.css" />
+    <Content Include="jquery-ui\jquery-ui-1.12.1\jquery-ui.theme.css" />
+    <Content Include="jquery-ui\jquery-ui-1.12.1\jquery-ui.theme.min.css" />
+    <Content Include="jquery-ui\jquery-ui-1.12.1\LICENSE.txt" />
     <Content Include="js\combobox.js" />
     <Content Include="js\jquery-3.4.1.min.js" />
+    <Content Include="js\page_js\AssignAdditional_Equip.js" />
     <Content Include="WSIInventory.asmx" />
+    <Content Include="bootstrap-4.4.1-dist\css\bootstrap-grid.css.map" />
+    <Content Include="bootstrap-4.4.1-dist\css\bootstrap-grid.min.css.map" />
+    <Content Include="bootstrap-4.4.1-dist\css\bootstrap-reboot.css.map" />
+    <Content Include="bootstrap-4.4.1-dist\css\bootstrap-reboot.min.css.map" />
+    <Content Include="bootstrap-4.4.1-dist\css\bootstrap.css.map" />
+    <Content Include="bootstrap-4.4.1-dist\css\bootstrap.min.css.map" />
+    <Content Include="bootstrap-4.4.1-dist\js\bootstrap.bundle.js.map" />
+    <Content Include="bootstrap-4.4.1-dist\js\bootstrap.bundle.min.js.map" />
+    <Content Include="bootstrap-4.4.1-dist\js\bootstrap.js.map" />
+    <Content Include="bootstrap-4.4.1-dist\js\bootstrap.min.js.map" />
     <None Include="CSS\img\ui-bg_diagonals-thick_18_b81900_40x40.png" />
     <None Include="CSS\img\ui-bg_diagonals-thick_20_666666_40x40.png" />
     <None Include="CSS\img\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -228,6 +267,7 @@
     <Content Include="Classes\DataSet1.xss">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Content>
+    <Content Include="jquery-ui\jquery-ui-1.12.1\package.json" />
     <None Include="My Project\PublishProfiles\CustomProfile1.pubxml" />
     <None Include="My Project\PublishProfiles\CustomProfile2.pubxml" />
     <None Include="My Project\PublishProfiles\CustomProfile4.pubxml" />

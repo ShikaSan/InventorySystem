@@ -4,6 +4,7 @@
     Inherits="InventorySystem.Reports"
     EnableEventValidation="false"
     EnableSessionState="True"
+    MaintainScrollPositionOnPostback="true"
     MasterPageFile="~/Forms/pmInventory.Master" %>
 <%@ MasterType VirtualPath="~/Forms/pmInventory.Master" %>
 

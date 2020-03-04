@@ -1786,6 +1786,16 @@
     Protected Sub btnNo_Click(sender As Object, e As EventArgs)
         idMesBox.Visible = False
     End Sub
+
+    Protected Sub btnAdditionalEquip_Click(sender As Object, e As EventArgs)
+        Session("employeeName") = txtName.Text
+        Session("AssignedID") = userid
+        Session("Username") = strUserName
+        Session("FullName") = strFullName
+        strUserName = ""
+        strFullName = ""
+        Response.Redirect("~/Forms/AssignAdditional_Equip.aspx")
+    End Sub
 #End Region
 #End Region
 End Class

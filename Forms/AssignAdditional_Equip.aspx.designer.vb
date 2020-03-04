@@ -23,6 +23,15 @@ Partial Public Class AssignAdditional_Equip
     Protected WithEvents TextBox1 As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
+    '''LocationDropDownList control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents LocationDropDownList As Global.System.Web.UI.WebControls.DropDownList
+    
+    '''<summary>
     '''updateBtn control.
     '''</summary>
     '''<remarks>
@@ -48,4 +57,25 @@ Partial Public Class AssignAdditional_Equip
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents hiddenCounterField As Global.System.Web.UI.WebControls.HiddenField
+    
+    '''<summary>
+    '''hiddenUserId control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents hiddenUserId As Global.System.Web.UI.WebControls.HiddenField
+    
+    '''<summary>
+    '''Master property.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated property.
+    '''</remarks>
+    Public Shadows ReadOnly Property Master() As InventorySystem.pageMaster
+        Get
+            Return CType(MyBase.Master,InventorySystem.pageMaster)
+        End Get
+    End Property
 End Class

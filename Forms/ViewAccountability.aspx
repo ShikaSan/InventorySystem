@@ -553,6 +553,7 @@
                     <div class="w3-left">
                         <asp:Button runat="server" ID="btnBack" Text="Back" OnClick="btnBack_Click" CssClass="w3-button w3-border" Font-Size="12px" Font-Bold="true" BackColor="#1e8cdb" ForeColor="White" />
                         <asp:Button runat="server" ID="btnEdit" Text="Edit" OnClick="btnEdit_Click" CssClass="w3-button w3-border" Font-Size="12px" Font-Bold="true" BackColor="#1e8cdb" ForeColor="White" />
+                        <asp:Button runat="server" ID="btnAdditionalEquip" Text="Assign Additional" OnClick="btnAdditionalEquip_Click" CssClass="w3-button w3-border" Font-Size="12px" Font-Bold="true" BackColor="#1e8cdb" ForeColor="White" />
                         <asp:Button runat="server" ID="btnReclaim" Text="Reclaim Equipment" OnClick="btnReclaim_Click" CssClass="w3-button w3-border" Font-Size="12px" Font-Bold="true" BackColor="#1e8cdb" ForeColor="White" />
                         <asp:Button runat="server" ID="btnPrint" Visible="false" Text="Print Accountability" OnClick="btnPrint_Click" CssClass="w3-button w3-border" Font-Size="12px" Font-Bold="true" BackColor="#1e8cdb" ForeColor="White" />
                     </div>
