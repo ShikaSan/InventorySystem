@@ -44,6 +44,8 @@
     <script src="../js/select2-4.0.13/dist/js/select2.min.js" type="text/javascript"></script>
     <link rel="stylesheet" href="../js/select2-4.0.13/dist/css/select2.min.css" />
     <script src="../bootstrap-4.4.1-dist/js/bootstrap.min.js" type="text/javascript"></script>
+    
+    <!-- This JS file handles most of the functionality of this webform. -->
     <script src="../js/page_js/AssignAdditional_Equip.js" type="text/javascript"></script>
 </asp:Content>
 
