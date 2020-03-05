@@ -8,12 +8,12 @@
 
                 var datahtml = '';
                 datahtml += '<tr>';
-                datahtml += '<td><select id="selectTypeRow' + rowCount + '" name="select_type" class="form-control select_type"></select></td>';
-                datahtml += '<td><select id="selectDescRow' + rowCount + '" name="select_desc" class="form-control select_desc"><option value="0">--SELECT--</option></select></td>';
-                datahtml += '<td><select id="selectPPERow' + rowCount + '" name="select_ppe" class="form-control select_ppe"><option value="0">--SELECT--</option></select></td>';
-                datahtml += '<td><select id="selectAssetRow' + rowCount + '" name="select_asset" class="form-control select_asset"><option value="0">--SELECT--</option></select></td>';
-                datahtml += '<td><select id="selectSerialRow' + rowCount + '" name="select_serial" class="form-control select_serial"><option value="0">--SELECT--</option></select></td>>';
-                datahtml += '<td><input type="button" name="remove" class="btn btn-danger remove" value="-" /></td></tr>';
+                datahtml += '<td><select id="selectTypeRow' + rowCount + '" name="select_type" class="w3-select form-control select_type"></select></td>';
+                datahtml += '<td><select id="selectDescRow' + rowCount + '" name="select_desc" class="w3-select form-control select_desc"><option value="0">--SELECT--</option></select></td>';
+                datahtml += '<td><select id="selectPPERow' + rowCount + '" name="select_ppe" class="w3-select form-control select_ppe"><option value="0">--SELECT--</option></select></td>';
+                datahtml += '<td><select id="selectAssetRow' + rowCount + '" name="select_asset" class="w3-select form-control select_asset"><option value="0">--SELECT--</option></select></td>';
+                datahtml += '<td><select id="selectSerialRow' + rowCount + '" name="select_serial" class="w3-select form-control select_serial"><option value="0">--SELECT--</option></select></td>>';
+                datahtml += '<td><input type="button" name="remove" class="w3-button w3-red remove" value="-" /></td></tr>';
 
                 $(datahtml).hide().appendTo('#equip_table').fadeIn('normal');
 

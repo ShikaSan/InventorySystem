@@ -17,43 +17,43 @@ Public Class AssignAdditional_Equip
     Private Shared configConnString = ConfigurationManager.ConnectionStrings("ITSGinventory").ConnectionString
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        HttpContext.Current.Response.Cache.SetCacheability(HttpCacheability.NoCache)
-        HttpContext.Current.Response.Cache.SetNoServerCaching()
-        HttpContext.Current.Response.Cache.SetNoStore()
+        'HttpContext.Current.Response.Cache.SetCacheability(HttpCacheability.NoCache)
+        'HttpContext.Current.Response.Cache.SetNoServerCaching()
+        'HttpContext.Current.Response.Cache.SetNoStore()
 
-        If Not IsPostBack Then
-            Try
-                Dim i As Integer = 0
-                While i < Session.Contents.Count
-                    If Session.Keys(i).ToString() = "Username" Then
-                        strUserName = Session("Username").ToString()
-                    ElseIf Session.Keys(i).ToString() = "FullName" Then
-                        strFullName = Session("FullName").ToString()
-                    End If
-                    i += 1
-                End While
+        'If Not IsPostBack Then
+        '    Try
+        '        Dim i As Integer = 0
+        '        While i < Session.Contents.Count
+        '            If Session.Keys(i).ToString() = "Username" Then
+        '                strUserName = Session("Username").ToString()
+        '            ElseIf Session.Keys(i).ToString() = "FullName" Then
+        '                strFullName = Session("FullName").ToString()
+        '            End If
+        '            i += 1
+        '        End While
 
-                If Session("FullName").ToString() <> String.Empty Then
-                    TextBox1.Text = Session("employeeName").ToString()
-                    hiddenUserId.Value = Integer.Parse(Session("AssignedID"))
-                    Me.Master.getUserName(strFullName, strUserName)
-                    Session.Remove("employeeName")
-                    Session.Remove("AssignedID")
-                    'Session.Remove("Username")
-                    'Session.Remove("FullName")
-                    'Dim cls As New User_Validation
-                    'If cls.userLevel(strUserName) = "RO" Then
-                    '    btnAddAcc.Visible = False
-                    'End If
-                Else
-                    Session.RemoveAll()
-                    Response.Redirect("~/Forms/Login.aspx")
-                End If
-            Catch ex As Exception
-                Session.RemoveAll()
-                Response.Redirect("~/Forms/Login.aspx")
-            End Try
-        End If
+        '        If Session("FullName").ToString() <> String.Empty Then
+        '            TextBox1.Text = Session("employeeName").ToString()
+        '            hiddenUserId.Value = Integer.Parse(Session("AssignedID"))
+        '            Me.Master.getUserName(strFullName, strUserName)
+        '            Session.Remove("employeeName")
+        '            Session.Remove("AssignedID")
+        '            'Session.Remove("Username")
+        '            'Session.Remove("FullName")
+        '            'Dim cls As New User_Validation
+        '            'If cls.userLevel(strUserName) = "RO" Then
+        '            '    btnAddAcc.Visible = False
+        '            'End If
+        '        Else
+        '            Session.RemoveAll()
+        '            Response.Redirect("~/Forms/Login.aspx")
+        '        End If
+        '    Catch ex As Exception
+        '        Session.RemoveAll()
+        '        Response.Redirect("~/Forms/Login.aspx")
+        '    End Try
+        'End If
     End Sub
 
     Protected Sub updateBtn_Click(sender As Object, e As EventArgs)
