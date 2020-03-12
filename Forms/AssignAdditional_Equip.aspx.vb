@@ -94,9 +94,9 @@ Public Class AssignAdditional_Equip
             End Using
         Catch er As SqlException
             Response.Write("<script>alert('" + er.ToString() + "');</script>")
+        Finally
+            Response.Write("<script>alert('Equipment Accountability Successfully Added');</script>")
         End Try
-
-        Response.Write("<script>alert('Equipment Accountability Successfully Added');</script>")
     End Sub
 
     'This is a WebMethod that gets called by the functions on the client-side code (JQuery AJAX)

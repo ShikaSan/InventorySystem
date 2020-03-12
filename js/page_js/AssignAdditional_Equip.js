@@ -5,15 +5,13 @@
 
             //Code to add fields/rows to the form.
             $(document).on('click', '.add', function () {
-
-                var datahtml = '';
-                datahtml += '<tr>';
-                datahtml += '<td><select id="selectTypeRow' + rowCount + '" name="select_type" class="form-control select_type"></select></td>';
-                datahtml += '<td><select id="selectDescRow' + rowCount + '" name="select_desc" class="form-control select_desc"><option value="0">--SELECT--</option></select></td>';
-                datahtml += '<td><select id="selectPPERow' + rowCount + '" name="select_ppe" class="form-control select_ppe"><option value="0">--SELECT--</option></select></td>';
-                datahtml += '<td><select id="selectAssetRow' + rowCount + '" name="select_asset" class="form-control select_asset"><option value="0">--SELECT--</option></select></td>';
-                datahtml += '<td><select id="selectSerialRow' + rowCount + '" name="select_serial" class="form-control select_serial"><option value="0">--SELECT--</option></select></td>>';
-                datahtml += '<td><input type="button" name="remove" class="btn btn-danger remove" value="-" /></td></tr>';
+                var datahtml = '<tr>';
+                datahtml += '<td><select id="selectTypeRow' + rowCount + '" name="select_type" class="w3-select form-control select_type"></select></td>';
+                datahtml += '<td><select id="selectDescRow' + rowCount + '" name="select_desc" class="w3-select form-control select_desc"><option value="0">--SELECT--</option></select></td>';
+                datahtml += '<td><select id="selectPPERow' + rowCount + '" name="select_ppe" class="w3-select form-control select_ppe"><option value="0">--SELECT--</option></select></td>';
+                datahtml += '<td><select id="selectAssetRow' + rowCount + '" name="select_asset" class="w3-select form-control select_asset"><option value="0">--SELECT--</option></select></td>';
+                datahtml += '<td><select id="selectSerialRow' + rowCount + '" name="select_serial" class="w3-select form-control select_serial"><option value="0">--SELECT--</option></select></td>>';
+                datahtml += '<td><input type="button" name="remove" class="w3-button w3-round w3-red remove" value="-" /></td></tr>';
 
                 $(datahtml).hide().appendTo('#equip_table').fadeIn('normal');
 
@@ -39,7 +37,8 @@
                             var getList_EquipType = JSON.parse(data.d);
                             var optionLength = getList_EquipType.length;
                             var dropDownLength = $(this)[0].length;
-                            if (dropDownLength == 0) {
+
+                            if (dropDownLength <= 0) {
                                 $(this).append('<option value="0">--SELECT--</option>');
                                 for (var i = 0; i < optionLength; i++) {
                                     $(this).append('<option value="' + getList_EquipType[i] + '">' + getList_EquipType[i] + '</option>');
@@ -89,7 +88,7 @@
 
                 $('.select_type').each(function () {
                     var count = 1;
-                    if ($(this).val() == '0') {
+                    if ($(this).val() == '0' || $(this).val() == '') {
                         error += "<p>SELECT AN EQUIPMENT TYPE AT " + count + " ROW</p>";
                         return false;
                     }
@@ -98,7 +97,7 @@
 
                 $('.select_desc').each(function () {
                     var count = 1;
-                    if ($(this).val() == '0') {
+                    if ($(this).val() == '0' || $(this).val() == '') {
                         error += "<p>SELECT EQUIPMENT DESCRIPTION AT " + count + " ROW</p>";
                         return false;
                     }
@@ -107,7 +106,7 @@
 
                 $('.select_ppe').each(function () {
                     var count = 1;
-                    if ($(this).val() == '0') {
+                    if ($(this).val() == '0' || $(this).val() == '') {
                         error += "<p>SELECT PPE # AT " + count + " ROW</p>";
                         return false;
                     }
@@ -116,7 +115,7 @@
 
                 $('.select_asset').each(function () {
                     var count = 1;
-                    if ($(this).val() == '0') {
+                    if ($(this).val() == '0' || $(this).val() == '') {
                         error += "<p>SELECT ASSET # AT " + count + " ROW</p>";
                         return false;
                     }
@@ -125,7 +124,7 @@
 
                 $('.select_serial').each(function () {
                     var count = 1;
-                    if ($(this).val() == '0') {
+                    if ($(this).val() == '0' || $(this).val() == '') {
                         error += "<p>SELECT SERIAL # AT " + count + " ROW</p>";
                         return false;
                     }
@@ -136,7 +135,7 @@
                     return true;
                 }
                 else {
-                    $('#error').html('<div class="alert alert-danger">' + error + '</div>');
+                    $('#error').html('<div class="w3-panel w3-red">' + error + '</div>');
                     return false;
                 }
             });

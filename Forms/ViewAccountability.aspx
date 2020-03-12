@@ -98,7 +98,7 @@
                             <div class="w3-quarter" style="padding: 4px 4px 4px 4px;">
                                 <asp:Label CssClass="labelSytle" runat="server" Text="Location : "></asp:Label>
                                 <editable:EditableDropDownList Width="93%" runat="server" ID="ddlLocation" AutoPostBack="true" CssClass="w3-input w3-border textboxStyle">
-                                    <asp:ListItem>---</asp:ListItem>
+                                    <asp:ListItem>--SELECT--</asp:ListItem>
                                     <asp:ListItem>ELVDI</asp:ListItem>
                                     <asp:ListItem>ITSDI</asp:ListItem>
                                     <asp:ListItem>ITSG</asp:ListItem>
@@ -553,7 +553,7 @@
                     <div class="w3-left">
                         <asp:Button runat="server" ID="btnBack" Text="Back" OnClick="btnBack_Click" CssClass="w3-button w3-border" Font-Size="12px" Font-Bold="true" BackColor="#1e8cdb" ForeColor="White" />
                         <asp:Button runat="server" ID="btnEdit" Text="Edit" OnClick="btnEdit_Click" CssClass="w3-button w3-border" Font-Size="12px" Font-Bold="true" BackColor="#1e8cdb" ForeColor="White" />
-                        <asp:Button runat="server" ID="btnAdditionalEquip" Text="Assign Additional" OnClick="btnAdditionalEquip_Click" CssClass="w3-button w3-border" Font-Size="12px" Font-Bold="true" BackColor="#1e8cdb" ForeColor="White" />
+                        <asp:Button runat="server" ID="btnAdditionalEquip" Text="Additional Equipment" OnClick="btnAdditionalEquip_Click" CssClass="w3-button w3-border" Font-Size="12px" Font-Bold="true" BackColor="#1e8cdb" ForeColor="White" />
                         <asp:Button runat="server" ID="btnReclaim" Text="Reclaim Equipment" OnClick="btnReclaim_Click" CssClass="w3-button w3-border" Font-Size="12px" Font-Bold="true" BackColor="#1e8cdb" ForeColor="White" />
                         <asp:Button runat="server" ID="btnPrint" Visible="false" Text="Print Accountability" OnClick="btnPrint_Click" CssClass="w3-button w3-border" Font-Size="12px" Font-Bold="true" BackColor="#1e8cdb" ForeColor="White" />
                     </div>

@@ -191,7 +191,6 @@
     <Content Include="bootstrap-4.4.1-dist\js\bootstrap.min.js" />
     <Content Include="CSS\font-awesome.min.css" />
     <Content Include="Forms\AssignAdditional_Equip.aspx" />
-    <Content Include="Forms\Assign_Additional_Equip.aspx" />
     <Content Include="jquery-ui\jquery-ui-1.12.1\AUTHORS.txt" />
     <Content Include="jquery-ui\jquery-ui-1.12.1\external\jquery\jquery.js" />
     <Content Include="jquery-ui\jquery-ui-1.12.1\images\ui-icons_444444_256x240.png" />
@@ -345,13 +344,6 @@
     <Compile Include="Forms\AssignAdditional_Equip.aspx.vb">
       <DependentUpon>AssignAdditional_Equip.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
-    </Compile>
-    <Compile Include="Forms\Assign_Additional_Equip.aspx.designer.vb">
-      <DependentUpon>Assign_Additional_Equip.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Assign_Additional_Equip.aspx.vb">
-      <DependentUpon>Assign_Additional_Equip.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Forms\History.aspx.designer.vb">
       <DependentUpon>History.aspx</DependentUpon>

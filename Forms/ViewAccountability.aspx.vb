@@ -136,7 +136,7 @@
         txtRFTdate.Text = ds.Tables(0).Rows(0)(7).ToString()
         prevName = txtAssignedTo.Text
 
-        ddlLocation.SelectedIndex = getData.getLoc(param_id)
+        ddlLocation.SelectedItem.Text = getData.getLoc(param_id)
         Dim type As String = getData.getTypes(param_id)
         ddlType.Text = type
         setDropDownList()
