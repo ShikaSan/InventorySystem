@@ -41,11 +41,8 @@
     <link rel="stylesheet" href="../js/select2-4.0.13/dist/css/select2.min.css" />
     <script src="../bootstrap-4.4.1-dist/js/bootstrap.min.js" type="text/javascript"></script>
     
-<<<<<<< Updated upstream
     <!-- This JS file handles most of the functionality of this webform. -->
-=======
     <!--Code for this page's interactivity and codebehind webmethod calls is here. -->
->>>>>>> Stashed changes
     <script src="../js/page_js/AssignAdditional_Equip.js" type="text/javascript"></script>
 </asp:Content>
 
